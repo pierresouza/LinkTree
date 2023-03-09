@@ -1,6 +1,19 @@
 import React from "react";
 import { Container, GlobalStyle } from "./styles/styles";
 
+interface DataButtons {
+  text: string;
+  link: string;
+  id: number;
+}
+
+const Data: DataButtons[] = [
+  { text: "Link 1", link: "", id: 1 },
+  { text: "Link 2", link: "", id: 2 },
+  { text: "Link 3", link: "", id: 3 },
+  { text: "Link 4", link: "", id: 4 },
+];
+
 export function App() {
   return (
     <>
@@ -13,12 +26,17 @@ export function App() {
           <p>@Pierre.souza</p>
         </div>
         <div className="list-buttons">
-          <ul>
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-            <li>Link 4</li>
-          </ul>
+          {Data.map(({ text, link, id }) => {
+            return (
+              <ul key={id}>
+                <li>
+                  <a href={link}>
+                    <p>{text}</p>
+                  </a>
+                </li>
+              </ul>
+            );
+          })}
         </div>
         <div className="social-media">
           <a href="">

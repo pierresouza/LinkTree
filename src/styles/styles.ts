@@ -55,18 +55,20 @@ export const Container = styled.div`
       height: 49px;
       border-radius: 0.25rem;
       border: 2px solid var(--purple);
-      color: var(--purple);
       cursor: pointer;
       font-family: "Roboto", sans-serif;
+      margin: 32px 0px;
 
       display: flex;
       align-items: center;
       justify-content: center;
-
-      & + li {
-        margin-top: 2rem;
-      }
       transition: all 0.7s;
+
+      a {
+        color: var(--purple);
+        text-decoration: none;
+      }
+
       &:hover {
         transform: scale(1.1);
       }
