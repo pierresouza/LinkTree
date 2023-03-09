@@ -27,12 +27,18 @@ body{
 export const Container = styled.div`
   .image-container {
     text-align: center;
+
     img {
+      transition: all ease 0.7s;
       height: 200px;
       width: 200px;
       border-radius: 50%;
       border: 4px solid #fff;
       outline: 2px solid var(--purple);
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
